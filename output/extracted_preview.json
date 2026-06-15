@@ -1,0 +1,178 @@
+{
+  "doc_001_vendor_contract.docx": {
+    "document_type": "Vendor Contract",
+    "extracted_fields": {
+      "parties_and_dates": {
+        "parties": [
+          "Acme Corporation",
+          "CloudBase Inc."
+        ],
+        "effective_date": "2024-03-01",
+        "expiry_date": "2025-02-28"
+      },
+      "commercial_terms": {
+        "contract_value": "$120,000 USD/year",
+        "payment_terms": "Customer shall pay Vendor an annual subscription fee of $120,000 USD, invoiced quarterly in advance at $30,000 per quarter. All invoices are due Net-30 from the invoice date. Late payments accrue interest at 1.5% per month."
+      },
+      "renewal_and_termination": {
+        "auto_renewal": "Yes — auto-renews for successive one-year periods",
+        "auto_renewal_notice_period": "45 days",
+        "termination_notice_convenience": "30 days' prior written notice",
+        "termination_notice_cause": "15 days to cure breach after notice"
+      },
+      "legal": {
+        "governing_law": "State of Delaware",
+        "dispute_resolution": "binding arbitration in New York, NY under the rules of JAMS",
+        "liability_cap": "the total fees paid or payable by Customer in the twelve (12) months immediately preceding the claim"
+      }
+    }
+  },
+  "doc_002_support_ticket.pdf": {
+    "document_type": "Support Ticket",
+    "extracted_fields": {
+      "ticket_metadata": {
+        "ticket_id": "INC-2024-08471",
+        "submitted_by": "Priya Mehta (priya.mehta@acmecorp.com)",
+        "submitted_date": "2024-07-15",
+        "priority": "CRITICAL",
+        "category": "Access / Data Loss",
+        "affected_system": "Oracle Financials ERP (Production)",
+        "assigned_to": "Platform Engineering Team",
+        "current_status": "Resolved"
+      },
+      "issue_details": {
+        "description": "Since the morning of July 15, Priya Mehta and three other Accounts Payable team members are unable to log into Oracle Financials, receiving an ORA-01017 error. This issue is blocking invoice processing and payment runs, with over 200 vendor invoices totaling approximately ₹1.8 crore needing processing by 5:00 PM IST. The problem is suspected to be due to an unsynced Oracle LDAP connector after an AD password rotation."
+      },
+      "resolution": {
+        "root_cause": "Oracle LDAP connector sync job failed silently after AD rotation.",
+        "resolved_by": "Vikram Nair (vikram.nair@acmecorp.com)",
+        "resolution_time": "1 hour 33 minutes",
+        "resolution_notes": "Platform Engineering identified the root cause as a failed Oracle LDAP connector sync job after AD rotation. The LDAP sync was manually re-triggered and completed successfully, allowing all affected users to log in. A post-mortem is scheduled for July 17, and LDAP sync monitoring alert will be added."
+      }
+    }
+  },
+  "doc_003_statement_of_work.docx": {
+    "document_type": "Statement of Work",
+    "extracted_fields": {
+      "project_name": "Intelligent Document Processing Automation",
+      "sow_number": "ENT-SOW-2024-019",
+      "client": "NovaBridge Financial Services Pvt. Ltd.",
+      "vendor": "Ententia AI Solutions Pvt. Ltd.",
+      "start_date": "2024-09-20",
+      "end_date": "2025-02-07",
+      "total_budget": "₹40,00,000",
+      "deliverables": [
+        "Scalable document ingestion and pre-processing pipeline supporting PDF, JPEG, PNG, and TIFF formats with OCR and quality assessment.",
+        "Document classification engine with multi-class support and ≥95% accuracy on test set.",
+        "Intelligent field extraction with named entity recognition and confidence scoring.",
+        "Validation and business rules engine with cross-document checks and audit logging.",
+        "Integration and API layer with REST API, webhook support, and admin dashboard.",
+        "Testing, UAT, and handover with ≥80% code coverage, UAT support, and training."
+      ],
+      "payment_milestones": [
+        {
+          "milestone": "Milestone 1",
+          "name": "Architecture Decision Record and Data Handling Agreement",
+          "amount": "₹8,00,000",
+          "due_date": "2024-09-20"
+        },
+        {
+          "milestone": "Milestone 2",
+          "name": "Ingestion Pipeline and Classifier",
+          "amount": "₹10,00,000",
+          "due_date": "2024-10-25"
+        },
+        {
+          "milestone": "Milestone 3",
+          "name": "Extraction Engine and Validation Rule Engine",
+          "amount": "₹12,00,000",
+          "due_date": "2024-12-06"
+        },
+        {
+          "milestone": "Milestone 4",
+          "name": "Integrated API and UAT Support",
+          "amount": "₹8,00,000",
+          "due_date": "2025-01-17"
+        },
+        {
+          "milestone": "Milestone 5",
+          "name": "Production Deployment and Training",
+          "amount": "₹2,00,000",
+          "due_date": "2025-02-07"
+        }
+      ],
+      "key_contacts": [
+        {
+          "role": "Client — Exec Sponsor",
+          "name": "Ramesh Iyer",
+          "email": "ramesh.iyer@novabridge.in"
+        },
+        {
+          "role": "Client — Project Lead",
+          "name": "Kavitha Subramaniam",
+          "email": "kavitha.s@novabridge.in"
+        },
+        {
+          "role": "Client — IT Integration Lead",
+          "name": "Yash Malhotra",
+          "email": "yash.malhotra@novabridge.in"
+        },
+        {
+          "role": "Vendor — Exec Sponsor",
+          "name": "Nishant Shah",
+          "email": "nishant.shah@ententia.ai"
+        },
+        {
+          "role": "Vendor — Technical Lead",
+          "name": "Arjun Pillai",
+          "email": "arjun.pillai@ententia.ai"
+        }
+      ]
+    }
+  },
+  "doc_004_invoice.pdf": {
+    "document_type": "Invoice",
+    "extracted_fields": {
+      "invoice_number": "ENT-INV-2024-0043",
+      "invoice_date": "2024-10-28",
+      "due_date": "2024-11-27",
+      "payment_terms": "Net-30",
+      "reference_sow": "ENT-SOW-2024-019",
+      "vendor": "ENTENTIA AI SOLUTIONS PVT. LTD.",
+      "client": "NovaBridge Financial Services Pvt. Ltd.",
+      "line_items": [
+        {
+          "description": "Milestone 2 Delivery: Document Ingestion Pipeline & Classification Model (Beta) [per SOW ENT-SOW-2024-019, Milestone 2]",
+          "quantity": "1",
+          "unit_price": "₹10,00,000",
+          "amount": "₹10,00,000"
+        },
+        {
+          "description": "Additional Data Annotation Services — manual labelling of 1,200 edge-case documents [Change Order CO-2024-003, dated Oct 10, 2024]",
+          "quantity": "40 hrs",
+          "unit_price": "₹3,500",
+          "amount": "₹1,40,000"
+        },
+        {
+          "description": "Cloud Infrastructure Setup & Configuration — AWS account provisioning, VPC setup, IAM roles [one-time, billed at cost]",
+          "quantity": "1",
+          "unit_price": "₹60,000",
+          "amount": "₹60,000"
+        }
+      ],
+      "totals": {
+        "subtotal": "₹12,00,000",
+        "gst_rate": "18%",
+        "gst_amount": "₹2,16,000",
+        "total_due": "₹14,16,000"
+      },
+      "payment_instructions": {
+        "bank": "HDFC Bank Ltd., Noida Sector 18",
+        "account_name": "Ententia AI Solutions Pvt. Ltd.",
+        "account_number": "50200098765432",
+        "ifsc_code": "HDFC0001234",
+        "upi_or_email": "billing@ententia.ai"
+      }
+    }
+  }
+}

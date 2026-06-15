@@ -1,0 +1,75 @@
+{
+  "source_file": "doc_004_invoice.pdf",
+  "classification": {
+    "document_type": "Invoice",
+    "confidence": 0.95,
+    "signals": [
+      "Invoice Number ENT-INV-2024-0043",
+      "TOTAL DUE: ₹14,16,000",
+      "Payment Terms Net-30"
+    ]
+  },
+  "tags": [
+    "b2b",
+    "net-30",
+    "gst",
+    "cloud-infrastructure",
+    "change-order",
+    "milestone",
+    "ai"
+  ],
+  "extracted_fields": {
+    "invoice_number": "ENT-INV-2024-0043",
+    "invoice_date": "2024-10-28",
+    "due_date": "2024-11-27",
+    "payment_terms": "Net-30",
+    "reference_sow": "ENT-SOW-2024-019",
+    "vendor": "ENTENTIA AI SOLUTIONS PVT. LTD.",
+    "client": "NovaBridge Financial Services Pvt. Ltd.",
+    "line_items": [
+      {
+        "description": "Milestone 2 Delivery: Document Ingestion Pipeline & Classification Model (Beta) [per SOW ENT-SOW-2024-019, Milestone 2]",
+        "quantity": "1",
+        "unit_price": "₹10,00,000",
+        "amount": "₹10,00,000"
+      },
+      {
+        "description": "Additional Data Annotation Services — manual labelling of 1,200 edge-case documents [Change Order CO-2024-003, dated Oct 10, 2024]",
+        "quantity": "40 hrs",
+        "unit_price": "₹3,500",
+        "amount": "₹1,40,000"
+      },
+      {
+        "description": "Cloud Infrastructure Setup & Configuration — AWS account provisioning, VPC setup, IAM roles [one-time, billed at cost]",
+        "quantity": "1",
+        "unit_price": "₹60,000",
+        "amount": "₹60,000"
+      }
+    ],
+    "totals": {
+      "subtotal": "₹12,00,000",
+      "gst_rate": "18%",
+      "gst_amount": "₹2,16,000",
+      "total_due": "₹14,16,000"
+    },
+    "payment_instructions": {
+      "bank": "HDFC Bank Ltd., Noida Sector 18",
+      "account_name": "Ententia AI Solutions Pvt. Ltd.",
+      "account_number": "50200098765432",
+      "ifsc_code": "HDFC0001234",
+      "upi_or_email": "billing@ententia.ai"
+    }
+  },
+  "summary": "This document is an invoice from ENTENTIA AI SOLUTIONS PVT. LTD. to NovaBridge Financial Services Pvt. Ltd., dated October 28, 2024, with a due date of November 27, 2024. The invoice, numbered ENT-INV-2024-0043, totals ₹14,16,000, including GST, for services related to a document ingestion pipeline, data annotation, and cloud infrastructure setup. Payment terms are Net-30, and a late fee of 1.5% per month applies to overdue balances.",
+  "pipeline_meta": {
+    "model_calls": 4,
+    "retries": {
+      "extract": 0,
+      "tag": 0,
+      "summarize": 0
+    },
+    "validation_errors_fixed": [],
+    "validation_errors_unresolved": [],
+    "duration_seconds": 6.71
+  }
+}

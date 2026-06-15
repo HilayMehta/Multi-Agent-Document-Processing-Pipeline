@@ -1,0 +1,54 @@
+{
+  "doc_001_vendor_contract.docx": {
+    "document_type": "Vendor Contract",
+    "tags": [
+      "vendor-contract",
+      "cloud-services",
+      "uptime-sla",
+      "net-30",
+      "auto-renewal",
+      "binding-arbitration",
+      "termination-clauses"
+    ],
+    "summary": "This document is a Master Services Agreement between Acme Corporation and CloudBase Inc., effective from March 1, 2024, to February 28, 2025. The contract involves an annual subscription fee of $120,000 USD, payable quarterly at $30,000 per quarter, with invoices due within 30 days. The agreement includes automatic renewal for one-year periods unless terminated with a 45-day notice, and it is governed by Delaware law with disputes resolved through arbitration in New York."
+  },
+  "doc_002_support_ticket.pdf": {
+    "document_type": "Support Ticket",
+    "tags": [
+      "critical-priority",
+      "access-issue",
+      "data-loss",
+      "oracle-financials",
+      "ldap-sync",
+      "invoice-processing",
+      "resolved"
+    ],
+    "summary": "This document is a support ticket submitted by Priya Mehta from Acme Corporation on July 15, 2024, regarding a critical access issue with the Oracle Financials ERP system. The issue, which prevented Priya and three other team members from logging in and processing over 200 vendor invoices totaling approximately ₹1.8 crore, was resolved by the Platform Engineering Team in 1 hour and 33 minutes. The root cause was identified as a failed Oracle LDAP connector sync job after an Active Directory password rotation, and the issue was resolved by manually re-triggering the LDAP sync."
+  },
+  "doc_003_statement_of_work.docx": {
+    "document_type": "Statement of Work",
+    "tags": [
+      "intelligent-document-processing",
+      "ai-automation",
+      "document-classification",
+      "named-entity-recognition",
+      "milestone-based",
+      "rest-api",
+      "user-acceptance-testing"
+    ],
+    "summary": "The document is a Statement of Work (SOW) for the \"Intelligent Document Processing Automation\" project between NovaBridge Financial Services Pvt. Ltd. and Ententia AI Solutions Pvt. Ltd. The project, with a total budget of ₹40,00,000, is scheduled to start on September 20, 2024, and end on February 7, 2025. Key deliverables include a document ingestion pipeline, classification engine, and integration API, with payment milestones tied to specific deliverables throughout the project timeline."
+  },
+  "doc_004_invoice.pdf": {
+    "document_type": "Invoice",
+    "tags": [
+      "invoice",
+      "net-30",
+      "milestone-based",
+      "change-order",
+      "gst",
+      "cloud-infrastructure",
+      "late-payment-fee"
+    ],
+    "summary": "This document is an invoice from ENTENTIA AI SOLUTIONS PVT. LTD. to NovaBridge Financial Services Pvt. Ltd., dated October 28, 2024, with a due date of November 27, 2024. The invoice, numbered ENT-INV-2024-0043, totals ₹14,16,000, including GST, for services such as the delivery of a document ingestion pipeline, additional data annotation, and cloud infrastructure setup. Payment is to be made to HDFC Bank Ltd., with specific account details provided."
+  }
+}

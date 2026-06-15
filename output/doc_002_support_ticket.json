@@ -1,0 +1,54 @@
+{
+  "source_file": "doc_002_support_ticket.pdf",
+  "classification": {
+    "document_type": "Support Ticket",
+    "confidence": 0.95,
+    "signals": [
+      "Ticket ID: INC-2024-08471",
+      "Status: Resolved",
+      "Issue Description: Unable to log into Oracle Financials."
+    ]
+  },
+  "tags": [
+    "critical",
+    "resolved",
+    "erp",
+    "financial-operations",
+    "ldap",
+    "production",
+    "p1"
+  ],
+  "extracted_fields": {
+    "ticket_metadata": {
+      "ticket_id": "INC-2024-08471",
+      "submitted_by": "Priya Mehta (priya.mehta@acmecorp.com)",
+      "submitted_date": "2024-07-15",
+      "priority": "CRITICAL",
+      "category": "Access / Data Loss",
+      "affected_system": "Oracle Financials ERP (Production)",
+      "assigned_to": "Platform Engineering Team",
+      "current_status": "Resolved"
+    },
+    "issue_details": {
+      "description": "Since 9:00 AM IST, Priya Mehta and three Accounts Payable team members cannot log into Oracle Financials, receiving an ORA-01017 error. This blocks invoice processing and payment runs, risking ₹1.8 crore in delayed payments. The issue is suspected to be due to an unsynced Oracle LDAP connector after an AD password rotation."
+    },
+    "resolution": {
+      "root_cause": "Oracle LDAP connector sync job failed silently after AD rotation.",
+      "resolved_by": "Vikram Nair (vikram.nair@acmecorp.com)",
+      "resolution_time": "1 hour 33 minutes",
+      "resolution_notes": "Platform Engineering manually re-triggered LDAP sync, resolving the login issue. All affected users confirmed access. A post-mortem is scheduled, and LDAP sync monitoring alerts will be added."
+    }
+  },
+  "summary": "This support ticket, submitted by Priya Mehta on July 15, 2024, involves a critical access issue with the Oracle Financials ERP system affecting the Accounts Payable team at Acme Corporation. The problem, caused by a failed Oracle LDAP connector sync after an Active Directory password rotation, risked delaying ₹1.8 crore in payments. The issue was resolved by Vikram Nair from the Platform Engineering Team in 1 hour and 33 minutes by manually re-triggering the LDAP sync, and all affected users regained access.",
+  "pipeline_meta": {
+    "model_calls": 4,
+    "retries": {
+      "extract": 0,
+      "tag": 0,
+      "summarize": 0
+    },
+    "validation_errors_fixed": [],
+    "validation_errors_unresolved": [],
+    "duration_seconds": 8.2
+  }
+}

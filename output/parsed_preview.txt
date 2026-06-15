@@ -1,0 +1,325 @@
+============================================================
+doc_001_vendor_contract.docx
+============================================================
+MASTER SERVICES AGREEMENT
+
+Effective Date: March 1, 2024
+
+This Master Services Agreement ("Agreement") is entered into as of March 1, 2024 ("Effective Date") by and between:
+
+| Acme Corporation; 200 Park Avenue; New York, NY 10166; "Customer" | CloudBase Inc.; 4500 Tech Blvd; San Francisco, CA 94105; "Vendor" |
+| --- | --- |
+
+1.  SERVICES
+
+1.1  Scope.  Vendor shall provide cloud hosting, managed Kubernetes orchestration, and 24/7 infrastructure monitoring services (collectively, "Services") as further described in Schedule A attached hereto.
+
+1.2  Service Levels.  Vendor commits to a monthly uptime SLA of 99.9% for all production environments. Credits for SLA breaches are detailed in Schedule B.
+
+2.  FEES AND PAYMENT
+
+2.1  Annual Fee.  Customer shall pay Vendor an annual subscription fee of $120,000 USD, invoiced quarterly in advance at $30,000 per quarter.
+
+2.2  Payment Terms.  All invoices are due Net-30 from the invoice date. Late payments accrue interest at 1.5% per month.
+
+2.3  Fee Adjustments.  Vendor may adjust fees at renewal with 60 days' prior written notice.
+
+3.  TERM AND RENEWAL
+
+3.1  Initial Term.  This Agreement commences on the Effective Date and continues for twelve (12) months, expiring on February 28, 2025 ("Initial Term").
+
+3.2  Auto-Renewal.  Unless either party provides written notice of non-renewal at least 45 days prior to the end of the then-current term, this Agreement shall automatically renew for successive one-year periods on the same terms and conditions.
+
+4.  CONFIDENTIALITY
+
+Each party agrees to hold the other party's Confidential Information in strict confidence and not disclose it to third parties without prior written consent.
+
+5.  INTELLECTUAL PROPERTY
+
+All pre-existing intellectual property of each party remains the sole property of that party. No license is granted except as expressly stated herein.
+
+6.  LIMITATION OF LIABILITY
+
+6.1  Liability Cap.  In no event shall either party's cumulative liability arising out of or related to this Agreement exceed the total fees paid or payable by Customer in the twelve (12) months immediately preceding the claim.
+
+6.2  Exclusion of Consequential Damages.  Neither party shall be liable for any indirect, incidental, special, or consequential damages, even if advised of the possibility thereof.
+
+7.  INDEMNIFICATION
+
+Each party ("Indemnifying Party") shall indemnify, defend, and hold harmless the other party from and against any third-party claims arising from the Indemnifying Party's gross negligence or willful misconduct.
+
+8.  TERMINATION
+
+8.1  Termination for Convenience.  Either party may terminate this Agreement for convenience upon 30 days' prior written notice to the other party.
+
+8.2  Termination for Cause.  Either party may terminate immediately upon written notice if the other party materially breaches this Agreement and fails to cure such breach within 15 days of receiving written notice thereof.
+
+9.  GOVERNING LAW AND DISPUTE RESOLUTION
+
+This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law provisions. Any disputes shall be resolved by binding arbitration in New York, NY under the rules of JAMS.
+
+10.  GENERAL
+
+10.1  Entire Agreement.  This Agreement, together with all Schedules, constitutes the entire agreement between the parties with respect to its subject matter.
+
+10.2  Amendments.  This Agreement may only be amended by a written instrument signed by authorized representatives of both parties.
+
+10.3  Notices.  All notices shall be delivered to the addresses listed on the signature page below.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the Effective Date.
+
+| ACME CORPORATION | CLOUDBASE INC. |
+| --- | --- |
+| By: ______________________________ | By: ______________________________ |
+| Name: Sarah Mitchell | Name: Derek Patel |
+| Title: Chief Procurement Officer | Title: VP of Sales |
+| Date: February 28, 2024 | Date: February 28, 2024 |
+| legal@acmecorp.com | contracts@cloudbase.io |
+
+============================================================
+doc_002_support_ticket.pdf
+============================================================
+INCIDENT TICKET
+ServiceNow | Acme Corporation IT
+Ticket ID
+INC-2024-08471
+Status
+Resolved
+Date Submitted
+2024-07-15 09:42 AM IST
+Priority
+G CRITICAL
+Submitted By
+Priya Mehta
+priya.mehta@acmecorp.co
+m
+Category
+Access / Data Loss
+Department
+Finance – Accounts
+Payable
+Assigned To
+Platform Engineering Team
+Affected
+System
+Oracle Financials ERP
+(Production)
+Resolution
+Time
+1 hour 33 minutes
+ISSUE DESCRIPTION
+Since this morning at approximately 9:00 AM IST, Priya Mehta and three other members of the
+Accounts Payable team (Rohit Verma, Sunita Rao, Deepak Joshi) are completely unable to log into
+Oracle Financials. The system returns the following error upon login:
+    ORA-01017: invalid username/password; logon denied
+This is blocking all invoice processing and payment runs. Today is the last day of the monthly payment
+cycle and the team has over 200 vendor invoices totalling approximately I1.8 crore that must be
+processed before 5:00 PM IST to avoid late payment penalties.
+STEPS TO REPRODUCE
+1. Navigate to https://erp.acmecorp.internal/oracle/login
+2. Enter valid AD credentials (confirmed working for Windows login)
+3. Click "Sign In"
+4. System returns ORA-01017 error immediately
+5. Password reset via Oracle self-service portal attempted — no change in behaviour
+ADDITIONAL CONTEXT
+Active Directory passwords were mass-rotated on July 14 at 11:30 PM as part of quarterly security
+policy enforcement. Oracle's LDAP connector was last synced at 10:00 PM on July 14 — before the
+rotation completed. Sanjay Kulkarni (Infrastructure) confirmed this at 9:55 AM.
+BUSINESS IMPACT
+
+CRITICAL — Financial operations fully blocked. Risk of I1.8 crore in delayed payments, potential
+vendor penalties, and breach of payment SLA commitments. Escalation to CFO (Arun Sharma) has
+been flagged.
+RESOLUTION NOTES
+[10:45 AM] — Platform Engineering (Vikram Nair) identified root cause: Oracle LDAP connector sync
+job failed silently after AD rotation. Manually re-triggered LDAP sync.
+[11:10 AM] — Sync completed successfully. All four affected users confirmed able to log in.
+[11:15 AM] — Ticket closed. Post-mortem scheduled for July 17. LDAP sync monitoring alert to be
+added.
+Resolved by: Vikram Nair | vikram.nair@acmecorp.com | Resolution time: 1 hr 33 min
+
+
+============================================================
+doc_003_statement_of_work.docx
+============================================================
+STATEMENT OF WORK
+
+Intelligent Document Processing Automation
+
+SOW Number: ENT-SOW-2024-019  |  Version 1.0  |  September 5, 2024
+
+| CLIENT; NovaBridge Financial Services Pvt. Ltd.; 12th Floor, One BKC; Bandra Kurla Complex, Mumbai 400051 | VENDOR; Ententia AI Solutions Pvt. Ltd.; WeWork Berger Delhi One, Sector 16B; Noida 201301 |
+| --- | --- |
+
+This Statement of Work is entered into under the Master Services Agreement dated June 1, 2024 between Client and Vendor.
+
+1.  PROJECT OVERVIEW
+
+NovaBridge processes over 15,000 loan application documents per month — including income proof, KYC documents, bank statements, and property papers — largely through manual review. Vendor will design and deploy an AI-powered Intelligent Document Processing (IDP) system to automate extraction, classification, and validation of these documents, reducing manual processing time by at least 70%.
+
+2.  SCOPE OF WORK
+
+2.1  Document Ingestion & Pre-processing
+
+Scalable ingestion pipeline supporting PDF, JPEG, PNG, and TIFF formats
+
+OCR for scanned documents using best-in-class models
+
+Document quality assessment and rejection workflow for illegible inputs
+
+2.2  Document Classification Engine
+
+Multi-class classifier supporting: Income Proof, Bank Statement, KYC – Aadhaar, KYC – PAN, Property Document, Loan Agreement, Other
+
+Target classification accuracy: ≥95% on held-out test set
+
+2.3  Intelligent Field Extraction
+
+Named entity recognition and structured extraction for each document class
+
+Extraction confidence scoring with human-review queue for low-confidence outputs
+
+2.4  Validation & Business Rules Engine
+
+Cross-document consistency checks (e.g. name on PAN matches name on bank statement)
+
+Configurable rule engine for client-specific validation logic
+
+Exception flagging and audit log
+
+2.5  Integration & API Layer
+
+REST API for integration with Client's Nucleus Software Finnone loan origination system
+
+Webhook support for real-time processing callbacks
+
+Admin dashboard for monitoring throughput, accuracy metrics, and queue status
+
+2.6  Testing, UAT & Handover
+
+Unit and integration test suite with ≥80% code coverage
+
+User Acceptance Testing support (2 rounds)
+
+Technical documentation, runbooks, and 2-day on-site training session in Mumbai
+
+3.  DELIVERABLES AND MILESTONES
+
+| Milestone | Deliverable | Due Date | Payment |
+| --- | --- | --- | --- |
+| Milestone 1 | Architecture Decision Record, Data Handling Agreement | 20 Sep 2024 | ₹8,00,000 |
+| Milestone 2 | Ingestion pipeline + classifier (≥90% accuracy on dev set) | 25 Oct 2024 | ₹10,00,000 |
+| Milestone 3 | Extraction engine for all 7 document classes + validation rule engine | 06 Dec 2024 | ₹12,00,000 |
+| Milestone 4 | Integrated API, admin dashboard, UAT support (2 rounds) | 17 Jan 2025 | ₹8,00,000 |
+| Milestone 5 | Production deployment, training session, runbooks | 07 Feb 2025 | ₹2,00,000 |
+| TOTAL CONTRACT VALUE | TOTAL CONTRACT VALUE | TOTAL CONTRACT VALUE | ₹40,00,000 |
+
+4.  PROJECT TIMELINE
+
+Start Date: September 20, 2024   |   End Date: February 7, 2025   |   Duration: ~20 weeks
+
+5.  KEY CONTACTS
+
+| Client — NovaBridge | Vendor — Ententia |
+| --- | --- |
+| Ramesh Iyer, CTO (Executive Sponsor); ramesh.iyer@novabridge.in | Nishant Shah, Co-Founder & CEO; nishant.shah@ententia.ai |
+| Kavitha Subramaniam (Project Lead); kavitha.s@novabridge.in | Arjun Pillai, Technical Lead; arjun.pillai@ententia.ai |
+| Yash Malhotra (IT Integration Lead); yash.malhotra@novabridge.in |  |
+
+6.  ASSUMPTIONS AND EXCLUSIONS
+
+Client will provide access to at minimum 5,000 labeled sample documents within 5 business days of project kickoff.
+
+Client is responsible for provisioning AWS infrastructure (Vendor will provide sizing specifications).
+
+This SOW does not include mobile application development or integration with systems other than Finnone.
+
+Any change in scope requires a signed Change Order and may affect timeline and cost.
+
+7.  ACCEPTANCE CRITERIA
+
+Each milestone deliverable will be accepted upon written sign-off from Client's Project Lead within 5 business days of delivery. Failure to respond within 5 days constitutes deemed acceptance.
+
+Agreed and accepted on behalf of the parties:
+
+| NOVABRIDGE FINANCIAL SERVICES PVT. LTD. | ENTENTIA AI SOLUTIONS PVT. LTD. |
+| --- | --- |
+| Signed: ______________________________ | Signed: ______________________________ |
+| Name: Ramesh Iyer | Name: Nishant Shah |
+| Title: Chief Technology Officer | Title: Co-Founder & CEO |
+| Date: September 4, 2024 | Date: September 5, 2024 |
+
+============================================================
+doc_004_invoice.pdf
+============================================================
+ENTENTIA AI SOLUTIONS PVT. LTD.
+WeWork Berger Delhi One, Sector 16B, Noida 201301
+GSTIN: 09AABCE1234F1ZK | PAN: AABCE1234F
+billing@ententia.ai | +91 98765 43210
+INVOICE
+BILLED TO
+NovaBridge Financial Services Pvt. Ltd.
+12th Floor, One BKC, Bandra Kurla Complex
+Mumbai 400051
+GSTIN: 27AADCN5678G1ZM
+Invoice Number
+ENT-INV-2024-0043
+Invoice Date
+October 28, 2024
+Due Date
+November 27, 2024
+Payment Terms
+Net-30
+Reference SOW
+ENT-SOW-2024-019
+Currency
+INR (Indian Rupees)
+#
+Description
+Qty
+Unit Price
+Amount
+1
+Milestone 2 Delivery: Document Ingestion Pipeline &
+Classification Model (Beta) [per SOW ENT-SOW-2024-019,
+Milestone 2]
+1
+I10,00,000
+I10,00,000
+2
+Additional Data Annotation Services — manual labelling
+of 1,200 edge-case documents [Change Order
+CO-2024-003, dated Oct 10, 2024]
+40 hrs
+I3,500
+I1,40,000
+3
+Cloud Infrastructure Setup & Configuration — AWS
+account provisioning, VPC setup, IAM roles [one-time,
+billed at cost]
+1
+I60,000
+I60,000
+Subtotal:
+I12,00,000
+GST (18%):
+I 2,16,000
+TOTAL DUE:
+I14,16,000
+PAYMENT INSTRUCTIONS
+Bank Name:
+HDFC Bank Ltd., Noida Sector 18
+Account Name:
+Ententia AI Solutions Pvt. Ltd.
+Account Number:
+50200098765432
+
+IFSC Code:
+HDFC0001234
+UPI / Email:
+billing@ententia.ai
+NOTES
+• This invoice corresponds to Milestone 2 completion, accepted by Kavitha Subramaniam (NovaBridge) via email
+on October 25, 2024.
+• Change Order CO-2024-003 for additional annotation services was signed by both parties on October 10, 2024.
+• A late payment fee of 1.5% per month will apply on any outstanding balance after the due date.

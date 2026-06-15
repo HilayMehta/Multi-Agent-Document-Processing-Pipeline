@@ -1,0 +1,58 @@
+{
+  "source_file": "doc_001_vendor_contract.docx",
+  "classification": {
+    "document_type": "Vendor Contract",
+    "confidence": 0.95,
+    "signals": [
+      "This Master Services Agreement is entered into as of March 1, 2024",
+      "Vendor shall provide cloud hosting, managed Kubernetes orchestration, and 24/7 infrastructure monitoring services",
+      "Customer shall pay Vendor an annual subscription fee of $120,000 USD"
+    ]
+  },
+  "tags": [
+    "b2b",
+    "cloud-infrastructure",
+    "managed-service",
+    "subscription",
+    "net-30",
+    "auto-renewal",
+    "bilateral"
+  ],
+  "extracted_fields": {
+    "parties_and_dates": {
+      "parties": [
+        "Acme Corporation",
+        "CloudBase Inc."
+      ],
+      "effective_date": "2024-03-01",
+      "expiry_date": "2025-02-28"
+    },
+    "commercial_terms": {
+      "contract_value": "$120,000 USD/year",
+      "payment_terms": "Customer shall pay Vendor an annual subscription fee of $120,000 USD, invoiced quarterly in advance at $30,000 per quarter. All invoices are due Net-30 from the invoice date. Late payments accrue interest at 1.5% per month."
+    },
+    "renewal_and_termination": {
+      "auto_renewal": "Yes — auto-renews for successive one-year periods",
+      "auto_renewal_notice_period": "45 days",
+      "termination_notice_convenience": "30 days' prior written notice",
+      "termination_notice_cause": "15 days to cure breach after notice"
+    },
+    "legal": {
+      "governing_law": "State of Delaware",
+      "dispute_resolution": "binding arbitration in New York, NY under the rules of JAMS",
+      "liability_cap": "the total fees paid or payable by Customer in the twelve (12) months immediately preceding the claim"
+    }
+  },
+  "summary": "This document is a Master Services Agreement between Acme Corporation and CloudBase Inc., effective from March 1, 2024, to February 28, 2025. The contract involves an annual subscription fee of $120,000 USD, paid quarterly, with automatic renewal unless terminated with 45 days' notice. The agreement includes provisions for cloud hosting services, a 99.9% uptime SLA, and dispute resolution through binding arbitration in New York, NY.",
+  "pipeline_meta": {
+    "model_calls": 4,
+    "retries": {
+      "extract": 0,
+      "tag": 0,
+      "summarize": 0
+    },
+    "validation_errors_fixed": [],
+    "validation_errors_unresolved": [],
+    "duration_seconds": 9.29
+  }
+}

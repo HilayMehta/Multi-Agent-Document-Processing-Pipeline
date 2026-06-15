@@ -1,0 +1,20 @@
+# Core pipeline
+langgraph>=0.2,<0.4
+openai>=1.30,<2
+pydantic>=2.7,<3
+python-dotenv>=1.0,<2
+
+# Document parsing (no LLM)
+pymupdf>=1.24,<2
+python-docx>=1.1,<2
+
+# CLI output
+rich>=13.7,<14
+
+# Eval + tests
+rapidfuzz>=3.9,<4
+pytest>=8.2,<9
+ruff>=0.4,<1
+
+# UI
+streamlit>=1.36,<2

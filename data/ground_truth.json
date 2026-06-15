@@ -1,0 +1,138 @@
+{
+  "doc_001_vendor_contract.docx": {
+    "document_type": "Vendor Contract",
+    "tags": ["saas", "cloud-infrastructure", "auto-renewal", "liability-cap", "indemnity", "net-30", "multi-party"],
+    "extracted_fields": {
+      "parties_and_dates": {
+        "parties": ["Acme Corporation", "CloudBase Inc."],
+        "effective_date": "2024-03-01",
+        "expiry_date": "2025-02-28"
+      },
+      "commercial_terms": {
+        "contract_value": "$120,000 USD/year",
+        "payment_terms": "Quarterly in advance at $30,000/quarter; Net-30 from invoice date; 1.5% per month late interest"
+      },
+      "renewal_and_termination": {
+        "auto_renewal": "Yes — auto-renews for successive 1-year terms",
+        "auto_renewal_notice_period": "45 days prior written notice to prevent renewal",
+        "termination_notice_convenience": "30 days",
+        "termination_notice_cause": "15 days to cure after written notice"
+      },
+      "legal": {
+        "governing_law": "State of Delaware",
+        "dispute_resolution": "Binding arbitration via JAMS, New York, NY",
+        "liability_cap": "Total fees paid or payable in the 12 months immediately preceding the claim"
+      }
+    },
+    "summary": "A master services agreement between Acme Corporation and CloudBase Inc. for cloud hosting, managed Kubernetes orchestration, and 24/7 infrastructure monitoring, valued at $120,000/year. The 12-month contract runs from March 2024 to February 2025, auto-renews unless 45 days' notice is given, and caps liability at the prior 12 months of fees paid. Governed by Delaware law with disputes resolved via JAMS arbitration in New York."
+  },
+  "doc_002_support_ticket.pdf": {
+    "document_type": "Support Ticket",
+    "tags": ["p1", "production-down", "access", "data-loss-risk", "erp", "ldap", "resolved"],
+    "extracted_fields": {
+      "ticket_metadata": {
+        "ticket_id": "INC-2024-08471",
+        "submitted_by": "Priya Mehta (priya.mehta@acmecorp.com)",
+        "submitted_date": "2024-07-15",
+        "priority": "Critical",
+        "category": "Access / Data Loss",
+        "affected_system": "Oracle Financials ERP (Production)",
+        "assigned_to": "Platform Engineering Team",
+        "current_status": "Resolved"
+      },
+      "issue_details":{
+        "description": "Four Accounts Payable team members unable to log into Oracle Financials ERP since 9:00 AM IST on 2024-07-15. Error: ORA-01017 invalid username/password. Suspected cause: Oracle LDAP connector not synced after a mass AD password rotation on July 14 at 11:30 PM."
+      },
+      "resolution": {
+        "root_cause": "Oracle LDAP connector sync job failed silently after AD password rotation",
+        "resolved_by": "Vikram Nair (vikram.nair@acmecorp.com)",
+        "resolution_time": "1 hour 33 minutes",
+        "resolution_notes": "Manually re-triggered LDAP sync at 10:45 AM; sync completed at 11:10 AM. All affected users confirmed able to log in. Post-mortem scheduled for July 17."
+      }
+    },
+    "summary": "A critical IT support ticket from Priya Mehta (Accounts Payable) reporting that four team members were locked out of Oracle Financials ERP on July 15, 2024, blocking ₹1.8 crore in time-sensitive vendor payments. Root cause was the LDAP connector failing to sync after a scheduled AD password rotation. Resolved by Vikram Nair in under 2 hours by manually re-triggering the LDAP sync."
+  },
+  "doc_003_statement_of_work.docx": {
+    "document_type": "Statement of Work",
+    "tags": ["ai", "document-processing", "ocr", "milestone-based", "fintech", "multi-party", "saas"],
+    "extracted_fields": {
+      "project_name": "Intelligent Document Processing Automation",
+      "sow_number": "ENT-SOW-2024-019",
+      "client": "NovaBridge Financial Services Pvt. Ltd.",
+      "vendor": "Ententia AI Solutions Pvt. Ltd.",
+      "start_date": "2024-09-20",
+      "end_date": "2025-02-07",
+      "total_budget": "₹40,00,000",
+      "deliverables": [
+        "Document Ingestion & Pre-processing Module (PDF, JPEG, PNG, TIFF + OCR)",
+        "Document Classification Engine — 7 classes, ≥95% accuracy",
+        "Intelligent Field Extraction with confidence scoring and human-review queue",
+        "Validation & Business Rules Engine with cross-document checks",
+        "REST API integration with Nucleus Software Finnone + webhook support",
+        "Admin dashboard for throughput and accuracy monitoring",
+        "Testing, UAT support (2 rounds), documentation, and on-site training"
+      ],
+      "payment_milestones": [
+        {"milestone": "Milestone 1", "name": "Architecture Sign-off", "amount": "₹8,00,000", "due_date": "2024-09-20"},
+        {"milestone": "Milestone 2", "name": "Ingestion Pipeline & Classifier (Beta)", "amount": "₹10,00,000", "due_date": "2024-10-25"},
+        {"milestone": "Milestone 3", "name": "Extraction Engine & Validation Rules", "amount": "₹12,00,000", "due_date": "2024-12-06"},
+        {"milestone": "Milestone 4", "name": "API Layer, Dashboard & UAT", "amount": "₹8,00,000", "due_date": "2025-01-17"},
+        {"milestone": "Milestone 5", "name": "Go-Live, Training & Documentation", "amount": "₹2,00,000", "due_date": "2025-02-07"}
+      ],
+      "key_contacts": [
+        {"role": "Client — Exec Sponsor", "name": "Ramesh Iyer (CTO)", "email": "ramesh.iyer@novabridge.in"},
+        {"role": "Client — Project Lead", "name": "Kavitha Subramaniam", "email": "kavitha.s@novabridge.in"},
+        {"role": "Client — IT Integration", "name": "Yash Malhotra", "email": "yash.malhotra@novabridge.in"},
+        {"role": "Vendor — Engagement Manager", "name": "Nishant Shah", "email": "nishant.shah@ententia.ai"},
+        {"role": "Vendor — Technical Lead", "name": "Arjun Pillai", "email": "arjun.pillai@ententia.ai"}
+      ]
+    },
+    "summary": "A 20-week statement of work between NovaBridge Financial Services and Ententia AI Solutions to build an AI-powered Intelligent Document Processing system for automating loan application document classification, extraction, and validation. The project runs from September 2024 to February 2025, covers 7 document classes, and is valued at ₹40,00,000 paid across 5 milestones. It includes OCR, a classification engine targeting ≥95% accuracy, field extraction with confidence scoring, validation rules, and integration with NovaBridge's Finnone loan origination system."
+  },
+  "doc_004_invoice.pdf": {
+    "document_type": "Invoice",
+    "tags": ["milestone-payment", "net-30", "gst", "change-order", "saas", "ai", "b2b"],
+    "extracted_fields": {
+      "invoice_number": "ENT-INV-2024-0043",
+      "invoice_date": "2024-10-28",
+      "due_date": "2024-11-27",
+      "payment_terms": "Net-30",
+      "reference_sow": "ENT-SOW-2024-019",
+      "vendor": "Ententia AI Solutions Pvt. Ltd.",
+      "client": "NovaBridge Financial Services Pvt. Ltd.",
+      "line_items": [
+        {
+          "description": "Milestone 2 Delivery: Document Ingestion Pipeline & Classification Model (Beta)",
+          "quantity": "1",
+          "unit_price": "₹10,00,000",
+          "amount": "₹10,00,000"
+        },
+        {
+          "description": "Additional Data Annotation Services (Change Order CO-2024-003)",
+          "quantity": "40 hrs",
+          "unit_price": "₹3,500",
+          "amount": "₹1,40,000"
+        },
+        {
+          "description": "Cloud Infrastructure Setup & Configuration (one-time, at cost)",
+          "quantity": "1",
+          "unit_price": "₹60,000",
+          "amount": "₹60,000"
+        }
+      ],
+      "totals": {
+        "subtotal": "₹12,00,000",
+        "gst_amount": "₹2,16,000",
+        "total_due": "₹14,16,000"
+      },
+      "payment_instructions": {
+        "bank": "HDFC Bank Ltd., Noida Sector 18",
+        "account_name": "Ententia AI Solutions Pvt. Ltd.",
+        "account_number": "50200098765432",
+        "ifsc_code": "HDFC0001234",
+        "upi_or_email": "billing@ententia.ai"
+      }
+    },
+    "summary": "An invoice from Ententia AI Solutions to NovaBridge Financial Services for ₹14,16,000 (including 18% GST), due November 27, 2024. The invoice covers Milestone 2 delivery of the document ingestion pipeline and classifier (₹10,00,000), additional annotation services under Change Order CO-2024-003 (₹1,40,000), and one-time AWS infrastructure setup (₹60,000), all under SOW ENT-SOW-2024-019."
+  }
+}
