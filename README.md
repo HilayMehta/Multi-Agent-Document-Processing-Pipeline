@@ -13,9 +13,7 @@ self-correction loop. The LLM provider is OpenAI. The primary way to use it is a
 
 ## Demo
 
-<!-- Paste your screen recording of the Streamlit UI here -->
-
-> Demo video of the Streamlit UI will be added here.
+https://drive.google.com/file/d/1sJtXlhlQQMZEnyVjrZ2N0cxbuez3iA3U/view?usp=drive_link
 
 ---
 
